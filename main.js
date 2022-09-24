@@ -56,11 +56,17 @@ let btn = document.getElementsByTagName('button')[0]; */
 //console.log(btn)
 console.log(localStorage)
 
-const renderPizza = pizza =>  cardContainer.innerHTML = 
+const renderPizza = pizza => { 
+if (pizza.length !== 0) { 
+    cardContainer.innerHTML = 
 `<h2>Pizza ${pizza.nombre}</h2> 
 <img src="${pizza.imagen}" alt="">
 <p>Ingredientes: ${pizza.ingredientes}</p>
 <p> Precio: $${pizza.precio}</p>`;
+} else {
+    cardContainer.innerHTML = `<h2>CONSULTE SU PIZZA</h2>`
+};
+}
 
 
 function add(e) {
@@ -80,4 +86,8 @@ function add(e) {
 
 btn.addEventListener("click", add);
 
+
 window.onload = renderPizza(pizzaStorage);
+
+
+//localStorage.clear()
