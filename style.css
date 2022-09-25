@@ -4,25 +4,33 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+    
+}
+
+body {
+    background-color: gray;
 }
 
 img {
     width: 200px;
     height: 200px;
-    border-radius: 10px;
+    border-radius: 15px;
+    padding-top: 10px;
 }
 
 .container {
     background-color: #181818;
-    width: 100%;
-    max-width: 850px;
+    width: 50%;
+    max-width:850px;
     margin: 0 auto;
     padding: 40px 30px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    align-items: baseline;
+    gap: 30px;
     color: whitesmoke;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.45);
 }
 
 .card-container {
@@ -30,13 +38,32 @@ img {
 }
 
 .input-container {
-
+    
+}
+input {
+    width: 220px;
+    outline: none;
+    border: none;
+    padding: 2px 2px;
+    background-color: whitesmoke;
+    color: #181818;
+}
+input::placeholder {
+    color: #181818;
+    font-size: 14px;
+}
+p {
+    padding-top: 20px;
 }
 
+h2 {
+    padding-top: 10px;
+}
 
 
 input {
     border-radius: 5px;
+    
 }
 
 button {
