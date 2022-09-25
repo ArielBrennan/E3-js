@@ -70,3 +70,16 @@ button {
     width: 20px;
     height: 20px;
 }
+small {
+    display: none;
+}
+
+.errormsg {
+    display: block;
+    color: #b91c1c;
+}
+
+
+.error {
+    border: 1px solid #dc3545;
+}

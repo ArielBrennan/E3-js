@@ -37,7 +37,8 @@ let cardContainer = document.querySelector('.card-container')
 let precio = document.querySelector('h4'); */
 let input = document.querySelector("input[type='number']");
 let btn = document.querySelector('button');
-
+let msg1 = document.querySelector('.msg1');
+let msg2 = document.querySelector('.msg2');
 
 let pizzaStorage = JSON.parse(localStorage.getItem("pizzas")) || [];
 // seteamos los elementos en localStorage
@@ -76,10 +77,21 @@ function add(e) {
         let pizza = Pizzas.find(item => item.id == valorInput);
         renderPizza(pizza);
         saveLocalStorage(pizza);
+        input.classList.remove("error")
+        msg1.classList.remove("errormsg")
+        msg2.classList.remove("errormsg")
+
     } else if (valorInput.length == 0) {
-        alert('Por favor ingrese un #id de pizza')
+        //alert('Por favor ingrese un #id de pizza')
+        input.classList.add("error")
+        msg2.classList.remove("errormsg")
+        msg1.classList.add("errormsg")
+
     } else {
-        alert('No existe ninguna pizza con ese #id')
+        //alert('No existe ninguna pizza con ese #id')
+        input.classList.add("error")
+        msg2.classList.add("errormsg")
+        msg1.classList.remove("errormsg")
     };
     input.value = "";
 }
